@@ -979,6 +979,274 @@ img {
   animation: scrollLineMove 2s var(--ease-in-out) infinite;
 }
 
+/* ---- Statement Section ---- */
+
+.statement-section {
+  padding: var(--space-xl) 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.statement-quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--walnut);
+  max-width: 800px;
+  letter-spacing: -0.01em;
+  animation: quoteBreathe 6s ease-in-out infinite;
+}
+
+@keyframes quoteBreathe {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+  35% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(-4px);
+    opacity: 0.95;
+  }
+  70% {
+    transform: translateY(-2px);
+  }
+  85% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.statement-quote::before {
+  content: '\201C';
+  color: var(--teak);
+  margin-right: 0.1em;
+}
+
+.statement-quote::after {
+  content: '\201D';
+  color: var(--teak);
+  margin-left: 0.05em;
+}
+
+.statement-rule {
+  width: 60px;
+  height: 2px;
+  background: var(--mustard);
+  margin-top: var(--space-md);
+  border-radius: 1px;
+  animation: rulePulse 6s ease-in-out infinite;
+}
+
+@keyframes rulePulse {
+  0%, 100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleX(1.15);
+    opacity: 0.7;
+  }
+}
+
+/* ---- Coffee Cup ---- */
+
+.coffee-scene {
+  position: relative;
+  width: 100px;
+  height: 200px;
+  margin-top: var(--space-sm);
+}
+
+.coffee-cup {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 52px;
+  height: 40px;
+  background: var(--cream-warm);
+  border: 3px solid var(--teak);
+  border-radius: 4px 4px 16px 16px;
+  overflow: hidden;
+}
+
+.coffee-liquid {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 75%;
+  background: linear-gradient(180deg, #6F4E37 0%, #4A3223 100%);
+  border-radius: 0 0 13px 13px;
+}
+
+.coffee-surface {
+  position: absolute;
+  bottom: 75%;
+  left: 2px;
+  right: 2px;
+  height: 4px;
+  background: linear-gradient(180deg, #8B6A4F, #6F4E37);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.coffee-handle {
+  position: absolute;
+  bottom: 22px;
+  right: 11px;
+  width: 16px;
+  height: 22px;
+  border: 3px solid var(--teak);
+  border-left: none;
+  border-radius: 0 12px 12px 0;
+  background: transparent;
+}
+
+.coffee-saucer {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 68px;
+  height: 8px;
+  background: var(--cream-warm);
+  border: 2.5px solid var(--teak);
+  border-radius: 50%;
+}
+
+/* Steam — tall wisps that rise toward the quote */
+.coffee-steam {
+  position: absolute;
+  bottom: 52px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 140px;
+  pointer-events: none;
+}
+
+.steam {
+  position: absolute;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to top, var(--teak-light), var(--cream-dark), transparent);
+  border-radius: 2px;
+  opacity: 0;
+}
+
+.steam-1 {
+  left: 12px;
+  height: 30px;
+  animation: steamTall 4s ease-out infinite;
+}
+
+.steam-2 {
+  left: 22px;
+  height: 24px;
+  animation: steamTall 4.5s ease-out 0.8s infinite;
+}
+
+.steam-3 {
+  left: 32px;
+  height: 28px;
+  animation: steamTall 3.8s ease-out 1.6s infinite;
+}
+
+.steam-4 {
+  left: 17px;
+  height: 20px;
+  animation: steamTall 5s ease-out 2.4s infinite;
+}
+
+.steam-5 {
+  left: 27px;
+  height: 26px;
+  animation: steamTall 4.2s ease-out 3.2s infinite;
+}
+
+@keyframes steamTall {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scaleX(1);
+  }
+  10% {
+    opacity: 0.45;
+  }
+  40% {
+    opacity: 0.3;
+    transform: translateY(-50px) scaleX(2) translateX(4px);
+  }
+  70% {
+    opacity: 0.15;
+    transform: translateY(-90px) scaleX(3) translateX(-3px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-130px) scaleX(4) translateX(2px);
+  }
+}
+
+/* Warmth particles — tiny dots drifting up from the cup toward the text */
+.coffee-warmth {
+  position: absolute;
+  bottom: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 150px;
+  pointer-events: none;
+}
+
+.warmth-particle {
+  position: absolute;
+  bottom: 0;
+  width: 3px;
+  height: 3px;
+  background: var(--teak-light);
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.wp-1 { left: 20px; animation: warmthDrift 5s ease-out infinite; }
+.wp-2 { left: 40px; animation: warmthDrift 6s ease-out 1s infinite; }
+.wp-3 { left: 55px; width: 2px; height: 2px; animation: warmthDrift 5.5s ease-out 2s infinite; }
+.wp-4 { left: 30px; width: 4px; height: 4px; animation: warmthDrift 7s ease-out 0.5s infinite; }
+.wp-5 { left: 50px; width: 2px; height: 2px; animation: warmthDrift 4.5s ease-out 3s infinite; }
+.wp-6 { left: 15px; width: 3px; height: 3px; animation: warmthDrift 6.5s ease-out 1.8s infinite; }
+
+@keyframes warmthDrift {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(1);
+  }
+  10% {
+    opacity: 0.4;
+  }
+  30% {
+    opacity: 0.35;
+    transform: translate(6px, -40px) scale(1.2);
+  }
+  60% {
+    opacity: 0.2;
+    transform: translate(-4px, -90px) scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(3px, -145px) scale(0.4);
+  }
+}
+
 /* ---- About Section ---- */
 
 .about {
@@ -1290,36 +1558,408 @@ img {
   transform: scale(1.02);
 }
 
-/* Geometric placeholder shapes */
-.placeholder-shape {
-  opacity: 0.6;
-  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+/* ---- Bioinformatics Illustrations ---- */
+
+.bio-illustration {
+  position: absolute;
+  inset: 0;
+  opacity: 0.7;
+  transition: opacity 0.6s var(--ease-out);
 }
 
-.project:hover .placeholder-shape {
-  opacity: 0.8;
-  transform: scale(1.05);
+.project:hover .bio-illustration {
+  opacity: 0.9;
 }
 
-.shape-arch {
-  width: 140px;
-  height: 200px;
-  background: var(--accent);
-  border-radius: 140px 140px 0 0;
+/* ======== 1. PATHOGEN (Bacterium) ======== */
+
+.bio-pathogen .pathogen-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 60px;
+  transform: translate(-50%, -50%);
+  background: var(--olive);
+  border-radius: 50px;
+  animation: pathogenFloat 5s var(--ease-in-out) infinite;
 }
 
-.shape-circle {
-  width: 160px;
-  height: 160px;
+.bio-pathogen .pathogen-membrane {
+  position: absolute;
+  inset: -4px;
+  border: 2px solid var(--olive-muted);
+  border-radius: 54px;
+  opacity: 0.5;
+}
+
+.bio-pathogen .pathogen-nucleus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(245, 240, 232, 0.3);
   border-radius: 50%;
-  background: var(--accent);
 }
 
-.shape-diamond {
-  width: 130px;
-  height: 130px;
-  background: var(--accent);
-  transform: rotate(45deg);
+/* Flagella — wavy tails */
+.bio-pathogen .pathogen-flagellum {
+  position: absolute;
+  top: 50%;
+  width: 80px;
+  height: 3px;
+  transform-origin: left center;
+}
+
+.bio-pathogen .flag-1 {
+  left: calc(50% - 120px);
+  margin-top: -8px;
+  background: linear-gradient(to left, var(--olive-muted), transparent);
+  animation: pathogenFloat 5s var(--ease-in-out) infinite, flagWave1 1.8s ease-in-out infinite;
+}
+
+.bio-pathogen .flag-2 {
+  left: calc(50% - 115px);
+  margin-top: 0px;
+  background: linear-gradient(to left, var(--olive-muted), transparent);
+  animation: pathogenFloat 5s var(--ease-in-out) infinite, flagWave2 2.1s ease-in-out infinite;
+}
+
+.bio-pathogen .flag-3 {
+  left: calc(50% - 118px);
+  margin-top: 8px;
+  background: linear-gradient(to left, var(--olive-muted), transparent);
+  animation: pathogenFloat 5s var(--ease-in-out) infinite, flagWave3 1.6s ease-in-out infinite;
+}
+
+/* Pili — short surface appendages */
+.bio-pathogen .pathogen-pilus {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: var(--olive-muted);
+  opacity: 0.5;
+  animation: pathogenFloat 5s var(--ease-in-out) infinite;
+}
+
+.bio-pathogen .pilus-1 { top: calc(50% - 32px); left: calc(50% - 20px); transform: rotate(-40deg); }
+.bio-pathogen .pilus-2 { top: calc(50% - 30px); left: calc(50% + 10px); transform: rotate(-50deg); }
+.bio-pathogen .pilus-3 { top: calc(50% + 22px); left: calc(50% - 15px); transform: rotate(35deg); }
+.bio-pathogen .pilus-4 { top: calc(50% + 20px); left: calc(50% + 15px); transform: rotate(45deg); }
+
+/* Floating DNA fragments */
+.bio-pathogen .dna-fragment {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--olive-muted);
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+.bio-pathogen .frag-1 { top: 18%; left: 20%; animation: fragmentFloat 6s ease-in-out infinite; }
+.bio-pathogen .frag-2 { top: 25%; right: 15%; width: 4px; height: 4px; animation: fragmentFloat 7s ease-in-out 1s infinite; }
+.bio-pathogen .frag-3 { bottom: 20%; left: 15%; width: 5px; height: 5px; animation: fragmentFloat 5.5s ease-in-out 0.5s infinite; }
+.bio-pathogen .frag-4 { bottom: 25%; right: 22%; width: 3px; height: 3px; animation: fragmentFloat 8s ease-in-out 2s infinite; }
+.bio-pathogen .frag-5 { top: 35%; right: 25%; width: 4px; height: 4px; animation: fragmentFloat 6.5s ease-in-out 1.5s infinite; }
+
+@keyframes pathogenFloat {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-6px); }
+}
+
+@keyframes flagWave1 {
+  0%, 100% { border-radius: 0; clip-path: polygon(0% 0%, 100% 30%, 100% 70%, 0% 100%); }
+  25% { clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 80%); }
+  50% { clip-path: polygon(0% 40%, 100% 10%, 100% 60%, 0% 100%); }
+  75% { clip-path: polygon(0% 0%, 100% 40%, 100% 90%, 0% 60%); }
+}
+
+@keyframes flagWave2 {
+  0%, 100% { transform: rotate(0deg) scaleY(1); }
+  33% { transform: rotate(3deg) scaleY(1.5); }
+  66% { transform: rotate(-3deg) scaleY(0.7); }
+}
+
+@keyframes flagWave3 {
+  0%, 100% { transform: rotate(0deg) scaleY(1); }
+  33% { transform: rotate(-4deg) scaleY(0.6); }
+  66% { transform: rotate(4deg) scaleY(1.4); }
+}
+
+@keyframes fragmentFloat {
+  0%, 100% { transform: translate(0, 0); opacity: 0.3; }
+  25% { transform: translate(6px, -8px); opacity: 0.5; }
+  50% { transform: translate(-4px, -12px); opacity: 0.4; }
+  75% { transform: translate(8px, -4px); opacity: 0.5; }
+}
+
+/* ======== 2. CORONAVIRUS ======== */
+
+.bio-virus .virus-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90px;
+  height: 90px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 40% 40%, var(--mustard-bright), var(--mustard));
+  border-radius: 50%;
+  animation: virusBreathe 4s var(--ease-in-out) infinite;
+}
+
+.bio-virus .virus-inner {
+  position: absolute;
+  inset: 12px;
+  border: 2px solid rgba(61, 43, 31, 0.2);
+  border-radius: 50%;
+}
+
+.bio-virus .virus-rna {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(61, 43, 31, 0.25);
+  border-radius: 40% 60% 50% 50%;
+  animation: rnaWiggle 3s ease-in-out infinite;
+}
+
+/* Spike proteins — the crown */
+.bio-virus .spike {
+  position: absolute;
+  width: 4px;
+  height: 22px;
+  background: var(--mustard);
+  border-radius: 2px;
+  transform-origin: bottom center;
+  animation: virusBreathe 4s var(--ease-in-out) infinite;
+}
+
+.bio-virus .spike::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 8px;
+  background: var(--mustard-bright);
+  border-radius: 50% 50% 20% 20%;
+}
+
+/* Position 12 spikes around the virus — using top/left + rotation */
+.bio-virus .spike-1  { top: calc(50% - 67px); left: calc(50% - 2px); transform: rotate(0deg); }
+.bio-virus .spike-2  { top: calc(50% - 63px); left: calc(50% + 24px); transform: rotate(30deg); }
+.bio-virus .spike-3  { top: calc(50% - 48px); left: calc(50% + 46px); transform: rotate(60deg); }
+.bio-virus .spike-4  { top: calc(50% - 24px); left: calc(50% + 55px); transform: rotate(90deg); }
+.bio-virus .spike-5  { top: calc(50% + 2px);  left: calc(50% + 50px); transform: rotate(120deg); }
+.bio-virus .spike-6  { top: calc(50% + 25px); left: calc(50% + 33px); transform: rotate(150deg); }
+.bio-virus .spike-7  { top: calc(50% + 35px); left: calc(50% + 2px);  transform: rotate(180deg); }
+.bio-virus .spike-8  { top: calc(50% + 28px); left: calc(50% - 30px); transform: rotate(210deg); }
+.bio-virus .spike-9  { top: calc(50% + 8px);  left: calc(50% - 50px); transform: rotate(240deg); }
+.bio-virus .spike-10 { top: calc(50% - 18px); left: calc(50% - 56px); transform: rotate(270deg); }
+.bio-virus .spike-11 { top: calc(50% - 44px); left: calc(50% - 46px); transform: rotate(300deg); }
+.bio-virus .spike-12 { top: calc(50% - 62px); left: calc(50% - 26px); transform: rotate(330deg); }
+
+/* Orbiting antibodies */
+.bio-virus .antibody {
+  position: absolute;
+  width: 16px;
+  height: 12px;
+  animation: orbitFloat 8s linear infinite;
+}
+
+.bio-virus .antibody::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--mustard-bright);
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.bio-virus .antibody::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 1px;
+  width: 14px;
+  height: 2px;
+  background: var(--mustard-bright);
+  opacity: 0.5;
+  border-radius: 1px;
+}
+
+.bio-virus .ab-1 { top: 12%; left: 18%; animation-duration: 9s; animation-delay: 0s; }
+.bio-virus .ab-2 { top: 70%; right: 12%; animation-duration: 11s; animation-delay: -3s; }
+.bio-virus .ab-3 { bottom: 15%; left: 25%; animation-duration: 10s; animation-delay: -6s; }
+
+@keyframes virusBreathe {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.06); }
+}
+
+@keyframes rnaWiggle {
+  0%, 100% { border-radius: 40% 60% 50% 50%; transform: translate(-50%, -50%) rotate(0deg); }
+  50% { border-radius: 60% 40% 50% 50%; transform: translate(-50%, -50%) rotate(5deg); }
+}
+
+@keyframes orbitFloat {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 0.5; }
+  25% { transform: translate(15px, -10px) rotate(90deg); opacity: 0.7; }
+  50% { transform: translate(0px, -20px) rotate(180deg); opacity: 0.5; }
+  75% { transform: translate(-15px, -10px) rotate(270deg); opacity: 0.7; }
+  100% { transform: translate(0, 0) rotate(360deg); opacity: 0.5; }
+}
+
+/* ======== 3. DNA DOUBLE HELIX ======== */
+
+.bio-dna .helix-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 220px;
+  transform: translate(-50%, -50%);
+  animation: helixRotate 10s linear infinite;
+}
+
+/* Strand backbones */
+.bio-dna .helix-strand {
+  position: absolute;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  border-radius: 2px;
+}
+
+.bio-dna .strand-a {
+  left: 0;
+  background: linear-gradient(to bottom,
+    var(--teak) 0%, var(--teak-light) 12%,
+    var(--teak) 25%, var(--teak-light) 37%,
+    var(--teak) 50%, var(--teak-light) 62%,
+    var(--teak) 75%, var(--teak-light) 87%,
+    var(--teak) 100%
+  );
+  animation: strandWaveA 4s var(--ease-in-out) infinite;
+}
+
+.bio-dna .strand-b {
+  right: 0;
+  background: linear-gradient(to bottom,
+    var(--teak-light) 0%, var(--teak) 12%,
+    var(--teak-light) 25%, var(--teak) 37%,
+    var(--teak-light) 50%, var(--teak) 62%,
+    var(--teak-light) 75%, var(--teak) 87%,
+    var(--teak-light) 100%
+  );
+  animation: strandWaveB 4s var(--ease-in-out) infinite;
+}
+
+/* Helix nodes (base pairs endpoints) */
+.bio-dna .helix-node {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--teak);
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bio-dna .node-a1, .bio-dna .node-b1 { top: 3%; }
+.bio-dna .node-a2, .bio-dna .node-b2 { top: 15.5%; }
+.bio-dna .node-a3, .bio-dna .node-b3 { top: 28%; }
+.bio-dna .node-a4, .bio-dna .node-b4 { top: 40.5%; }
+.bio-dna .node-a5, .bio-dna .node-b5 { top: 53%; }
+.bio-dna .node-a6, .bio-dna .node-b6 { top: 65.5%; }
+.bio-dna .node-a7, .bio-dna .node-b7 { top: 78%; }
+.bio-dna .node-a8, .bio-dna .node-b8 { top: 90.5%; }
+
+/* Rungs connecting the two strands */
+.bio-dna .helix-rung {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  height: 2px;
+  background: var(--teak-light);
+  opacity: 0.5;
+}
+
+.bio-dna .rung-1 { top: 4.5%; animation: rungPulse 4s ease-in-out 0s infinite; }
+.bio-dna .rung-2 { top: 17%; animation: rungPulse 4s ease-in-out 0.5s infinite; }
+.bio-dna .rung-3 { top: 29.5%; animation: rungPulse 4s ease-in-out 1s infinite; }
+.bio-dna .rung-4 { top: 42%; animation: rungPulse 4s ease-in-out 1.5s infinite; }
+.bio-dna .rung-5 { top: 54.5%; animation: rungPulse 4s ease-in-out 2s infinite; }
+.bio-dna .rung-6 { top: 67%; animation: rungPulse 4s ease-in-out 2.5s infinite; }
+.bio-dna .rung-7 { top: 79.5%; animation: rungPulse 4s ease-in-out 3s infinite; }
+.bio-dna .rung-8 { top: 92%; animation: rungPulse 4s ease-in-out 3.5s infinite; }
+
+/* Data nodes flowing along the helix */
+.bio-dna .data-node {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--teak-light);
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.bio-dna .dn-1 { top: 20%; left: 25%; animation: dataFlow 5s ease-in-out infinite; }
+.bio-dna .dn-2 { top: 50%; right: 20%; width: 6px; height: 6px; animation: dataFlow 6s ease-in-out 1.5s infinite; }
+.bio-dna .dn-3 { bottom: 25%; left: 20%; width: 5px; height: 5px; animation: dataFlow 7s ease-in-out 3s infinite; }
+.bio-dna .dn-4 { top: 35%; right: 28%; width: 7px; height: 7px; animation: dataFlow 5.5s ease-in-out 2s infinite; }
+
+/* Data lines connecting to helix */
+.bio-dna .data-line {
+  position: absolute;
+  width: 1px;
+  height: 30px;
+  background: linear-gradient(to bottom, var(--teak-light), transparent);
+  opacity: 0.3;
+}
+
+.bio-dna .dl-1 { top: 22%; left: 28%; transform: rotate(30deg); animation: dataFlow 5s ease-in-out 0.5s infinite; }
+.bio-dna .dl-2 { top: 52%; right: 24%; transform: rotate(-20deg); animation: dataFlow 6s ease-in-out 2s infinite; }
+.bio-dna .dl-3 { bottom: 28%; left: 24%; transform: rotate(15deg); animation: dataFlow 7s ease-in-out 3.5s infinite; }
+
+@keyframes helixRotate {
+  0%, 100% { transform: translate(-50%, -50%) rotateY(0deg); }
+  50% { transform: translate(-50%, -50%) rotateY(15deg); }
+}
+
+@keyframes strandWaveA {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(20px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(-20px); }
+}
+
+@keyframes strandWaveB {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-20px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(20px); }
+}
+
+@keyframes rungPulse {
+  0%, 100% { opacity: 0.5; transform: scaleX(1); }
+  50% { opacity: 0.8; transform: scaleX(1.05); }
+}
+
+@keyframes dataFlow {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(-15px); opacity: 0.7; }
 }
 
 .project-number {

@@ -38,6 +38,11 @@ function renderContent(data) {
   document.getElementById('hero-role').textContent = data.role;
   document.getElementById('hero-tagline').innerHTML = data.tagline.replace(/\n/g, '<br>');
 
+  // Statement
+  if (data.statement) {
+    document.getElementById('statement-text').textContent = data.statement;
+  }
+
   // About heading — convert *text* to <em>text</em>
   document.getElementById('about-heading').innerHTML = formatHeading(data.about.heading);
 
@@ -85,16 +90,101 @@ function renderContent(data) {
     </div>
   `;
 
-  // Projects
-  const shapes = ['shape-arch', 'shape-circle', 'shape-diamond'];
+  // Projects — bioinformatics illustrations
   const accents = ['var(--olive)', 'var(--mustard)', 'var(--teak)'];
+  const illustrations = [
+    // 0: Pathogen WGS Pipeline — bacterium with flagella + DNA fragments
+    `<div class="bio-illustration bio-pathogen">
+      <div class="pathogen-body">
+        <div class="pathogen-membrane"></div>
+        <div class="pathogen-nucleus"></div>
+      </div>
+      <div class="pathogen-flagellum flag-1"></div>
+      <div class="pathogen-flagellum flag-2"></div>
+      <div class="pathogen-flagellum flag-3"></div>
+      <div class="pathogen-pilus pilus-1"></div>
+      <div class="pathogen-pilus pilus-2"></div>
+      <div class="pathogen-pilus pilus-3"></div>
+      <div class="pathogen-pilus pilus-4"></div>
+      <div class="dna-fragment frag-1"></div>
+      <div class="dna-fragment frag-2"></div>
+      <div class="dna-fragment frag-3"></div>
+      <div class="dna-fragment frag-4"></div>
+      <div class="dna-fragment frag-5"></div>
+    </div>`,
+
+    // 1: SARS-CoV-2 Variant Classifier — coronavirus with spike proteins
+    `<div class="bio-illustration bio-virus">
+      <div class="virus-body">
+        <div class="virus-inner"></div>
+        <div class="virus-rna"></div>
+      </div>
+      <div class="spike spike-1"></div>
+      <div class="spike spike-2"></div>
+      <div class="spike spike-3"></div>
+      <div class="spike spike-4"></div>
+      <div class="spike spike-5"></div>
+      <div class="spike spike-6"></div>
+      <div class="spike spike-7"></div>
+      <div class="spike spike-8"></div>
+      <div class="spike spike-9"></div>
+      <div class="spike spike-10"></div>
+      <div class="spike spike-11"></div>
+      <div class="spike spike-12"></div>
+      <div class="antibody ab-1"></div>
+      <div class="antibody ab-2"></div>
+      <div class="antibody ab-3"></div>
+    </div>`,
+
+    // 2: Genomics Data Portal — DNA double helix with data nodes
+    `<div class="bio-illustration bio-dna">
+      <div class="helix-container">
+        <div class="helix-strand strand-a">
+          <div class="helix-node node-a1"></div>
+          <div class="helix-node node-a2"></div>
+          <div class="helix-node node-a3"></div>
+          <div class="helix-node node-a4"></div>
+          <div class="helix-node node-a5"></div>
+          <div class="helix-node node-a6"></div>
+          <div class="helix-node node-a7"></div>
+          <div class="helix-node node-a8"></div>
+        </div>
+        <div class="helix-rung rung-1"></div>
+        <div class="helix-rung rung-2"></div>
+        <div class="helix-rung rung-3"></div>
+        <div class="helix-rung rung-4"></div>
+        <div class="helix-rung rung-5"></div>
+        <div class="helix-rung rung-6"></div>
+        <div class="helix-rung rung-7"></div>
+        <div class="helix-rung rung-8"></div>
+        <div class="helix-strand strand-b">
+          <div class="helix-node node-b1"></div>
+          <div class="helix-node node-b2"></div>
+          <div class="helix-node node-b3"></div>
+          <div class="helix-node node-b4"></div>
+          <div class="helix-node node-b5"></div>
+          <div class="helix-node node-b6"></div>
+          <div class="helix-node node-b7"></div>
+          <div class="helix-node node-b8"></div>
+        </div>
+      </div>
+      <div class="data-node dn-1"></div>
+      <div class="data-node dn-2"></div>
+      <div class="data-node dn-3"></div>
+      <div class="data-node dn-4"></div>
+      <div class="data-line dl-1"></div>
+      <div class="data-line dl-2"></div>
+      <div class="data-line dl-3"></div>
+    </div>`
+  ];
+
   const projects = document.getElementById('projects');
   projects.innerHTML = data.projects
     .map((proj, i) => `
       <article class="project ${i % 2 === 1 ? 'project--reverse' : ''}">
         <div class="project-image">
           <div class="project-placeholder" style="--accent: ${accents[i % accents.length]};">
-            <div class="placeholder-shape ${shapes[i % shapes.length]}"></div>
+            ${illustrations[i] || illustrations[0]}
           </div>
         </div>
         <div class="project-info">
@@ -146,7 +236,7 @@ function escapeAttr(str) {
 function initAnimations() {
   // Scroll reveal
   const revealElements = document.querySelectorAll(
-    '.section-grid, .project, .contact-link, .about-decorative, .timeline-item, .skill-item, .education'
+    '.statement-section, .section-grid, .project, .contact-link, .about-decorative, .timeline-item, .skill-item, .education'
   );
 
   revealElements.forEach(el => el.classList.add('reveal'));
