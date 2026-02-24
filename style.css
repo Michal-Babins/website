@@ -259,7 +259,7 @@ img {
   display: flex;
   align-items: flex-end;
   gap: 30px;
-  animation: pairWalk 35s linear infinite;
+  animation: pairWalk 55s linear infinite;
 }
 
 .snail {
@@ -277,7 +277,7 @@ img {
   height: 8px;
   background: var(--teak-light);
   border-radius: 4px 10px 10px 2px;
-  animation: snailSquish 1.6s ease-in-out infinite;
+  animation: snailSquish 2.4s ease-in-out infinite;
 }
 
 /* Slime trail */
@@ -400,7 +400,7 @@ img {
   width: 60px;
   height: 40px;
   flex-shrink: 0;
-  animation: catAnxious 3s ease-in-out infinite;
+  animation: catAnxious 4.5s ease-in-out infinite;
 }
 
 /* Body */
@@ -423,7 +423,7 @@ img {
   height: 18px;
   background: var(--walnut);
   border-radius: 50% 50% 40% 40%;
-  animation: catHeadBob 0.6s ease-in-out infinite;
+  animation: catHeadBob 1s ease-in-out infinite;
 }
 
 /* Ears */
@@ -540,7 +540,7 @@ img {
   border-color: var(--walnut) transparent transparent transparent;
   border-radius: 50%;
   transform: rotate(-30deg);
-  animation: tailSwish 1s ease-in-out infinite;
+  animation: tailSwish 1.6s ease-in-out infinite;
 }
 
 /* Legs */
@@ -556,22 +556,22 @@ img {
 
 .cat-leg--fl {
   left: 36px;
-  animation: legFront 0.4s ease-in-out infinite;
+  animation: legFront 0.65s ease-in-out infinite;
 }
 
 .cat-leg--fr {
   left: 42px;
-  animation: legFront 0.4s ease-in-out 0.2s infinite;
+  animation: legFront 0.65s ease-in-out 0.3s infinite;
 }
 
 .cat-leg--bl {
   left: 12px;
-  animation: legBack 0.4s ease-in-out 0.2s infinite;
+  animation: legBack 0.65s ease-in-out 0.3s infinite;
 }
 
 .cat-leg--br {
   left: 18px;
-  animation: legBack 0.4s ease-in-out infinite;
+  animation: legBack 0.65s ease-in-out infinite;
 }
 
 /* Paws */
