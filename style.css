@@ -259,7 +259,7 @@ img {
   display: flex;
   align-items: flex-end;
   gap: 30px;
-  animation: pairWalk 120s linear infinite;
+  animation: pairWalk 80s linear infinite;
 }
 
 .snail {
