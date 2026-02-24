@@ -117,29 +117,27 @@ function renderContent(data) {
       </div>
     </div>`,
 
-    // 1: SARS-CoV-2 Variant Classifier — capsid actively packaging code
+    // 1: SARS-CoV-2 Variant Classifier — capsid consuming code
     `<div class="bio-illustration bio-capsid">
+      <div class="capsid-glow"></div>
       <div class="capsid-shell">
         <div class="capsid-facet facet-1"></div>
         <div class="capsid-facet facet-2"></div>
         <div class="capsid-facet facet-3"></div>
         <div class="capsid-facet facet-4"></div>
         <div class="capsid-facet facet-5"></div>
-        <div class="capsid-facet facet-6"></div>
         <div class="capsid-inner"></div>
-        <div class="capsid-packed packed-1">ATGC</div>
-        <div class="capsid-packed packed-2">0110</div>
-        <div class="capsid-packed packed-3">seq</div>
       </div>
-      <div class="capsid-glow"></div>
-      <div class="code-fly fly-l fly-1">def classify(seq):</div>
-      <div class="code-fly fly-l fly-2">SPIKE_P681R</div>
-      <div class="code-fly fly-l fly-3">embedding = encode(s)</div>
-      <div class="code-fly fly-l fly-4">score: 0.97</div>
-      <div class="code-fly fly-r fly-5">return model.predict(x)</div>
-      <div class="code-fly fly-r fly-6">variant: B.1.617.2</div>
-      <div class="code-fly fly-r fly-7">loss = cross_entropy(y)</div>
-      <div class="code-fly fly-r fly-8">ACE2 binding: HIGH</div>
+      <div class="code-fly cf-1">def classify(seq):</div>
+      <div class="code-fly cf-2">SPIKE_P681R</div>
+      <div class="code-fly cf-3">model.predict(x)</div>
+      <div class="code-fly cf-4">variant: B.1.617</div>
+      <div class="code-fly cf-5">score = 0.97</div>
+      <div class="code-fly cf-6">embed(protein)</div>
+      <div class="code-fly cf-7">ACE2_BINDING</div>
+      <div class="code-fly cf-8">cross_entropy()</div>
+      <div class="code-fly cf-9">ATGCGATCCA</div>
+      <div class="code-fly cf-10">import torch</div>
     </div>`,
 
     // 2: Pathogen Surveillance — covid particles drifting like pollen
