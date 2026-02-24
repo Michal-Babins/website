@@ -5,7 +5,7 @@
   "about": {
     "heading": "From raw reads\nto *real impact.*",
     "columns": [
-      "I build end-to-end bioinformatics pipelines — from reads QC through variant calling to production deployment. My work in pathogen surveillance at national labs and genomics companies has meant writing code where correctness isn't optional, it's life-or-death.",
+      "I build end-to-end bioinformatics pipelines — from reads QC through variant calling to production deployment. My work in pathogen surveillance at national labs and genomics companies has meant writing code where correctness isn't optional, it's essential for tangible impact.",
       "With a background spanning molecular genetics, machine learning, and cloud infrastructure, I'm most at home at the intersection of biology and software engineering — where a well-crafted pipeline can reshape how we understand disease."
     ]
   },
@@ -34,11 +34,9 @@
       "org": "Los Alamos National Laboratory",
       "description": "Developed containerized multi-omics workflows. Trained ML models for SARS-CoV-2 variant prediction using BERT protein embeddings and deep mutational scanning data."
     }
-  ],
-  "education": [
+  ], "education": [
     { "degree": "MS, Bioinformatics & Genomics", "school": "University of Oregon", "year": "2021" },
-    { "degree": "BS, Molecular Genetics & Genomics", "school": "Michigan State University", "year": "2020" }
-  ],
+    { "degree": "BS, Molecular Genetics & Genomics", "school": "Michigan State University", "year": "2020" } ],
   "projects": [
     {
       "title": "Pathogen WGS Pipeline",
@@ -60,8 +58,8 @@
     "heading": "Let's build\nsomething *together.*",
     "links": [
       { "label": "Email", "value": "mbabinski17@gmail.com", "url": "mailto:mbabinski17@gmail.com" },
-      { "label": "GitHub", "value": "michalbabinski", "url": "https://github.com/michalbabinski" },
-      { "label": "LinkedIn", "value": "michalbabinski", "url": "https://linkedin.com/in/michalbabinski" }
+      { "label": "GitHub", "value": "michalbabinski", "url": "https://github.com/Michal-Babins" },
+      { "label": "LinkedIn", "value": "michalbabinski", "url": "https://www.linkedin.com/in/michal-babinski-322790177" }
     ]
   }
 }
