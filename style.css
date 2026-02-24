@@ -991,13 +991,13 @@ img {
 
 .statement-quote {
   font-family: var(--font-display);
-  font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+  font-size: clamp(1rem, 2vw, 1.35rem);
   font-weight: 400;
   font-style: italic;
-  line-height: 1.4;
+  line-height: 1.7;
   color: var(--walnut);
-  max-width: 800px;
-  letter-spacing: -0.01em;
+  max-width: 560px;
+  letter-spacing: 0.01em;
   animation: quoteBreathe 6s ease-in-out infinite;
 }
 
@@ -1723,7 +1723,11 @@ img {
   100% { opacity: 0; }
 }
 
-/* ======== 2. CAPSID PACKAGING CODE ======== */
+/* ======== 2. CAPSID ACTIVELY PACKAGING CODE ======== */
+
+.bio-capsid {
+  overflow: hidden;
+}
 
 .bio-capsid .capsid-shell {
   position: absolute;
@@ -1734,14 +1738,14 @@ img {
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background: radial-gradient(circle at 40% 35%, var(--mustard-bright), var(--mustard));
-  animation: capsidPulse 5s var(--ease-in-out) infinite;
+  animation: capsidDigest 4s var(--ease-in-out) infinite;
   overflow: hidden;
+  z-index: 2;
 }
 
-/* Hexagonal facet lines on the capsid surface */
 .bio-capsid .capsid-facet {
   position: absolute;
-  background: rgba(61, 43, 31, 0.12);
+  background: rgba(61, 43, 31, 0.15);
 }
 
 .bio-capsid .facet-1 { top: 30%; left: 10%; width: 80%; height: 1px; transform: rotate(5deg); }
@@ -1758,100 +1762,150 @@ img {
   border-radius: 50%;
 }
 
-/* Code already packaged inside — glows softly */
-.bio-capsid .capsid-code {
+/* Code already packed inside — pulses as new code arrives */
+.bio-capsid .capsid-packed {
   position: absolute;
   font-family: 'DM Sans', monospace;
-  font-size: 0.55rem;
+  font-size: 0.5rem;
   color: var(--walnut);
-  opacity: 0.35;
   letter-spacing: 0.05em;
-  font-weight: 500;
+  font-weight: 600;
+  animation: packedPulse 4s ease-in-out infinite;
 }
 
-.bio-capsid .code-1 { top: 35%; left: 25%; animation: codeGlow 4s ease-in-out infinite; }
-.bio-capsid .code-2 { top: 50%; left: 30%; animation: codeGlow 4s ease-in-out 1.3s infinite; }
-.bio-capsid .code-3 { top: 60%; left: 35%; animation: codeGlow 4s ease-in-out 2.6s infinite; }
+.bio-capsid .packed-1 { top: 32%; left: 28%; animation-delay: 0s; }
+.bio-capsid .packed-2 { top: 50%; left: 35%; animation-delay: 1.3s; }
+.bio-capsid .packed-3 { top: 62%; left: 40%; animation-delay: 2.6s; }
 
-/* Code streams flying in from the edges and getting absorbed */
-.bio-capsid .code-stream {
-  position: absolute;
-  overflow: hidden;
-}
-
-.bio-capsid .code-stream span {
-  display: block;
-  font-family: 'DM Sans', monospace;
-  font-size: 0.6rem;
-  color: var(--mustard-bright);
-  white-space: nowrap;
-  letter-spacing: 0.04em;
-  font-weight: 500;
-  opacity: 0;
-}
-
-.bio-capsid .stream-1 { top: 15%; left: -30%; animation: none; }
-.bio-capsid .stream-1 span { animation: codeAbsorb 7s ease-in 0s infinite; --target-x: calc(50vw * 0.3); }
-
-.bio-capsid .stream-2 { bottom: 20%; right: -35%; animation: none; }
-.bio-capsid .stream-2 span { animation: codeAbsorbR 8s ease-in 1.5s infinite; }
-
-.bio-capsid .stream-3 { top: 40%; left: -25%; animation: none; }
-.bio-capsid .stream-3 span { animation: codeAbsorb 6.5s ease-in 3s infinite; }
-
-.bio-capsid .stream-4 { bottom: 35%; right: -40%; animation: none; }
-.bio-capsid .stream-4 span { animation: codeAbsorbR 7.5s ease-in 2s infinite; }
-
-.bio-capsid .stream-5 { top: 65%; left: -20%; animation: none; }
-.bio-capsid .stream-5 span { animation: codeAbsorb 8s ease-in 4s infinite; }
-
-.bio-capsid .stream-6 { top: 25%; right: -30%; animation: none; }
-.bio-capsid .stream-6 span { animation: codeAbsorbR 7s ease-in 5s infinite; }
-
-/* Absorption flash on the capsid */
-.bio-capsid .absorb-flash {
+/* Glow aura — pulses when code gets absorbed */
+.bio-capsid .capsid-glow {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 110px;
-  height: 110px;
+  width: 140px;
+  height: 140px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(232, 184, 32, 0.3), transparent 70%);
+  background: radial-gradient(circle, rgba(232, 184, 32, 0.25), transparent 65%);
+  z-index: 1;
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* Code fragments flying toward the capsid */
+.bio-capsid .code-fly {
+  position: absolute;
+  font-family: 'DM Sans', monospace;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--mustard-bright);
+  white-space: nowrap;
+  z-index: 3;
   opacity: 0;
-  animation: absorbFlash 7s ease-out infinite;
 }
 
-@keyframes capsidPulse {
-  0%, 100% { transform: translate(-50%, -50%) scale(1); }
-  50% { transform: translate(-50%, -50%) scale(1.04); }
+/* Left-to-right streams */
+.bio-capsid .fly-l {
+  left: -40%;
 }
 
-@keyframes codeGlow {
-  0%, 100% { opacity: 0.25; }
-  50% { opacity: 0.5; }
+.bio-capsid .fly-1 { top: 18%; animation: suckInL 5s ease-in infinite; }
+.bio-capsid .fly-2 { top: 38%; animation: suckInL 5s ease-in 1.2s infinite; }
+.bio-capsid .fly-3 { top: 58%; animation: suckInL 5s ease-in 2.5s infinite; }
+.bio-capsid .fly-4 { top: 78%; animation: suckInL 5s ease-in 3.7s infinite; }
+
+/* Right-to-left streams */
+.bio-capsid .fly-r {
+  right: -40%;
 }
 
-@keyframes codeAbsorb {
-  0% { opacity: 0; transform: translateX(0); }
-  10% { opacity: 0.7; }
-  70% { opacity: 0.5; transform: translateX(min(280px, 60vw)); }
-  85% { opacity: 0; transform: translateX(min(320px, 70vw)) scale(0.5); }
-  100% { opacity: 0; transform: translateX(min(320px, 70vw)) scale(0); }
+.bio-capsid .fly-5 { top: 28%; animation: suckInR 5s ease-in 0.6s infinite; }
+.bio-capsid .fly-6 { top: 48%; animation: suckInR 5s ease-in 1.8s infinite; }
+.bio-capsid .fly-7 { top: 68%; animation: suckInR 5s ease-in 3.1s infinite; }
+.bio-capsid .fly-8 { top: 85%; animation: suckInR 5s ease-in 4.3s infinite; }
+
+/* Capsid "chews" — squishes on absorption */
+@keyframes capsidDigest {
+  0%, 100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+  25% { transform: translate(-50%, -50%) scale(1.06, 0.95) rotate(1deg); }
+  50% { transform: translate(-50%, -50%) scale(0.96, 1.05) rotate(-1deg); }
+  75% { transform: translate(-50%, -50%) scale(1.04, 0.97) rotate(0.5deg); }
 }
 
-@keyframes codeAbsorbR {
-  0% { opacity: 0; transform: translateX(0); }
-  10% { opacity: 0.7; }
-  70% { opacity: 0.5; transform: translateX(max(-280px, -60vw)); }
-  85% { opacity: 0; transform: translateX(max(-320px, -70vw)) scale(0.5); }
-  100% { opacity: 0; transform: translateX(max(-320px, -70vw)) scale(0); }
+@keyframes packedPulse {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.1); }
 }
 
-@keyframes absorbFlash {
-  0%, 60% { opacity: 0; }
-  72% { opacity: 1; }
-  85%, 100% { opacity: 0; }
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+/* Left side code: appears, accelerates toward center, shrinks and vanishes into capsid */
+@keyframes suckInL {
+  0% {
+    opacity: 0;
+    left: -40%;
+    transform: scale(1) translateY(0);
+  }
+  8% {
+    opacity: 0.8;
+    left: -30%;
+  }
+  40% {
+    opacity: 0.7;
+    left: 10%;
+    transform: scale(1) translateY(-3px);
+  }
+  70% {
+    opacity: 0.6;
+    left: 30%;
+    transform: scale(0.8) translateY(2px);
+  }
+  88% {
+    opacity: 0.3;
+    left: 42%;
+    transform: scale(0.3) translateY(0);
+  }
+  95%, 100% {
+    opacity: 0;
+    left: 48%;
+    transform: scale(0);
+  }
+}
+
+/* Right side code: mirrors left */
+@keyframes suckInR {
+  0% {
+    opacity: 0;
+    right: -40%;
+    transform: scale(1) translateY(0);
+  }
+  8% {
+    opacity: 0.8;
+    right: -30%;
+  }
+  40% {
+    opacity: 0.7;
+    right: 10%;
+    transform: scale(1) translateY(3px);
+  }
+  70% {
+    opacity: 0.6;
+    right: 30%;
+    transform: scale(0.8) translateY(-2px);
+  }
+  88% {
+    opacity: 0.3;
+    right: 42%;
+    transform: scale(0.3) translateY(0);
+  }
+  95%, 100% {
+    opacity: 0;
+    right: 48%;
+    transform: scale(0);
+  }
 }
 
 /* ======== 3. COVID PARTICLES DRIFTING LIKE POLLEN ======== */

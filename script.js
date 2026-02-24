@@ -117,7 +117,7 @@ function renderContent(data) {
       </div>
     </div>`,
 
-    // 1: SARS-CoV-2 Variant Classifier — capsid packaging code
+    // 1: SARS-CoV-2 Variant Classifier — capsid actively packaging code
     `<div class="bio-illustration bio-capsid">
       <div class="capsid-shell">
         <div class="capsid-facet facet-1"></div>
@@ -127,17 +127,19 @@ function renderContent(data) {
         <div class="capsid-facet facet-5"></div>
         <div class="capsid-facet facet-6"></div>
         <div class="capsid-inner"></div>
-        <div class="capsid-code code-1">ATGC</div>
-        <div class="capsid-code code-2">01101</div>
-        <div class="capsid-code code-3">BERT</div>
+        <div class="capsid-packed packed-1">ATGC</div>
+        <div class="capsid-packed packed-2">0110</div>
+        <div class="capsid-packed packed-3">seq</div>
       </div>
-      <div class="code-stream stream-1"><span>def classify(seq):</span></div>
-      <div class="code-stream stream-2"><span>return model.predict(x)</span></div>
-      <div class="code-stream stream-3"><span>SPIKE_P681R</span></div>
-      <div class="code-stream stream-4"><span>embedding = encode(s)</span></div>
-      <div class="code-stream stream-5"><span>variant: B.1.617.2</span></div>
-      <div class="code-stream stream-6"><span>score: 0.97</span></div>
-      <div class="absorb-flash"></div>
+      <div class="capsid-glow"></div>
+      <div class="code-fly fly-l fly-1">def classify(seq):</div>
+      <div class="code-fly fly-l fly-2">SPIKE_P681R</div>
+      <div class="code-fly fly-l fly-3">embedding = encode(s)</div>
+      <div class="code-fly fly-l fly-4">score: 0.97</div>
+      <div class="code-fly fly-r fly-5">return model.predict(x)</div>
+      <div class="code-fly fly-r fly-6">variant: B.1.617.2</div>
+      <div class="code-fly fly-r fly-7">loss = cross_entropy(y)</div>
+      <div class="code-fly fly-r fly-8">ACE2 binding: HIGH</div>
     </div>`,
 
     // 2: Pathogen Surveillance — covid particles drifting like pollen
