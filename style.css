@@ -1095,6 +1095,7 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
+  height: 75%;
   background: linear-gradient(180deg, #6F4E37 0%, #4A3223 100%);
   border-radius: 0 0 13px 13px;
   animation: coffeeLevel 45s ease-in-out infinite;
@@ -1102,11 +1103,13 @@ img {
 
 .coffee-surface {
   position: absolute;
+  bottom: 75%;
   left: 2px;
   right: 2px;
   height: 4px;
   background: linear-gradient(180deg, #8B6A4F, #6F4E37);
   border-radius: 50%;
+  opacity: 0.7;
   animation: surfaceLevel 45s ease-in-out infinite;
 }
 
