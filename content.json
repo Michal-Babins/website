@@ -51,7 +51,7 @@
     },
     {
       "title": "Pathogen Surveillence Automation Sofware",
-      "description": "Built out and architected automation library for quickly setting up and deploying workflow and data orchestration for different pathogen surviellence networks allowing for real time insights into organism evolution.",
+      "description": "Built out and architected automation library for quickly setting up and deploying workflow automations and data orchestration for different pathogen surviellence networks allowing for real time insights into organism evolution.",
       "tags": ["Data Modeling", "BigQuery", "APIs", "Cloud Architecture"]
     }
   ],
