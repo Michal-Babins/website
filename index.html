@@ -25,6 +25,39 @@
     </div>
   </nav>
 
+  <!-- Cat following snail -->
+  <div class="chase-track">
+    <div class="chase-pair">
+      <!-- Cat is first in DOM but positioned behind via order/margin -->
+      <div class="cat">
+        <div class="cat-tail"></div>
+        <div class="cat-body"></div>
+        <div class="cat-head">
+          <div class="cat-ear cat-ear--l"></div>
+          <div class="cat-ear cat-ear--r"></div>
+          <div class="cat-face">
+            <div class="cat-eye cat-eye--l"></div>
+            <div class="cat-eye cat-eye--r"></div>
+            <div class="cat-nose"></div>
+            <div class="cat-whisker cat-whisker--l"></div>
+            <div class="cat-whisker cat-whisker--r"></div>
+          </div>
+        </div>
+        <div class="cat-leg cat-leg--fl"></div>
+        <div class="cat-leg cat-leg--fr"></div>
+        <div class="cat-leg cat-leg--bl"></div>
+        <div class="cat-leg cat-leg--br"></div>
+      </div>
+      <div class="snail">
+        <div class="snail-shell"></div>
+        <div class="snail-body"></div>
+        <div class="snail-eye snail-eye--l"></div>
+        <div class="snail-eye snail-eye--r"></div>
+      </div>
+    </div>
+    <div class="ground-line"></div>
+  </div>
+
   <!-- Hero -->
   <section class="hero">
     <div class="hero-layout">
@@ -34,17 +67,45 @@
         <div class="hero-rule"></div>
         <p class="hero-tagline" id="hero-tagline"></p>
       </div>
+      <div class="hero-cheers">
+        <div class="beer-mug beer-mug--left">
+          <div class="mug-body">
+            <div class="beer-liquid"></div>
+            <div class="beer-foam"></div>
+          </div>
+          <div class="mug-handle"></div>
+          <div class="beer-splash splash--left">
+            <div class="splash-drop drop-1"></div>
+            <div class="splash-drop drop-2"></div>
+            <div class="splash-drop drop-3"></div>
+            <div class="splash-drop drop-4"></div>
+          </div>
+        </div>
+        <div class="beer-mug beer-mug--right">
+          <div class="mug-body">
+            <div class="beer-liquid"></div>
+            <div class="beer-foam"></div>
+          </div>
+          <div class="mug-handle"></div>
+          <div class="beer-splash splash--right">
+            <div class="splash-drop drop-1"></div>
+            <div class="splash-drop drop-2"></div>
+            <div class="splash-drop drop-3"></div>
+            <div class="splash-drop drop-4"></div>
+          </div>
+        </div>
+      </div>
       <div class="hero-visual">
-        <div class="hero-shape">
+        <div class="hero-photo-composition">
           <div class="starburst">
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
               <path d="M100,0 L112,88 L200,100 L112,112 L100,200 L88,112 L0,100 L88,88 Z" fill="var(--mustard)"/>
             </svg>
           </div>
-          <!-- DNA helix nod — double circles -->
-          <div class="hero-circle"></div>
-          <div class="hero-circle-secondary"></div>
-          <div class="hero-diamond"></div>
+          <div class="hero-photo-frame">
+            <img src="photo.jpg" alt="Michal Babinski on a mountain summit" class="hero-photo">
+          </div>
+          <div class="hero-diamond"><span class="diamond-text">hello</span></div>
         </div>
       </div>
     </div>

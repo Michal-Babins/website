@@ -240,7 +240,7 @@ function initNav() {
 /* ---- Parallax on hero shapes ---- */
 
 function initParallax() {
-  const heroShape = document.querySelector('.hero-shape');
+  const heroShape = document.querySelector('.hero-photo-composition');
   if (heroShape && window.matchMedia('(hover: hover)').matches) {
     document.addEventListener('mousemove', (e) => {
       const x = (e.clientX / window.innerWidth - 0.5) * 20;
