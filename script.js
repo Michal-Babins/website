@@ -93,88 +93,121 @@ function renderContent(data) {
   // Projects — bioinformatics illustrations
   const accents = ['var(--olive)', 'var(--mustard)', 'var(--teak)'];
   const illustrations = [
-    // 0: Pathogen WGS Pipeline — bacterium with flagella + DNA fragments
+    // 0: Pathogen WGS Pipeline — bacterium flinching from approaching stimuli
     `<div class="bio-illustration bio-pathogen">
-      <div class="pathogen-body">
-        <div class="pathogen-membrane"></div>
-        <div class="pathogen-nucleus"></div>
+      <div class="stimulus stim-1"></div>
+      <div class="stimulus stim-2"></div>
+      <div class="stimulus stim-3"></div>
+      <div class="stimulus stim-4"></div>
+      <div class="stim-ring ring-1"></div>
+      <div class="stim-ring ring-2"></div>
+      <div class="bacterium">
+        <div class="bact-membrane"></div>
+        <div class="bact-cytoplasm"></div>
+        <div class="bact-nucleus"></div>
+        <div class="bact-flagellum flag-1"></div>
+        <div class="bact-flagellum flag-2"></div>
+        <div class="bact-flagellum flag-3"></div>
+        <div class="bact-pilus pilus-1"></div>
+        <div class="bact-pilus pilus-2"></div>
+        <div class="bact-pilus pilus-3"></div>
+        <div class="bact-pilus pilus-4"></div>
+        <div class="bact-pilus pilus-5"></div>
+        <div class="bact-pilus pilus-6"></div>
       </div>
-      <div class="pathogen-flagellum flag-1"></div>
-      <div class="pathogen-flagellum flag-2"></div>
-      <div class="pathogen-flagellum flag-3"></div>
-      <div class="pathogen-pilus pilus-1"></div>
-      <div class="pathogen-pilus pilus-2"></div>
-      <div class="pathogen-pilus pilus-3"></div>
-      <div class="pathogen-pilus pilus-4"></div>
-      <div class="dna-fragment frag-1"></div>
-      <div class="dna-fragment frag-2"></div>
-      <div class="dna-fragment frag-3"></div>
-      <div class="dna-fragment frag-4"></div>
-      <div class="dna-fragment frag-5"></div>
     </div>`,
 
-    // 1: SARS-CoV-2 Variant Classifier — coronavirus with spike proteins
-    `<div class="bio-illustration bio-virus">
-      <div class="virus-body">
-        <div class="virus-inner"></div>
-        <div class="virus-rna"></div>
+    // 1: SARS-CoV-2 Variant Classifier — capsid packaging code
+    `<div class="bio-illustration bio-capsid">
+      <div class="capsid-shell">
+        <div class="capsid-facet facet-1"></div>
+        <div class="capsid-facet facet-2"></div>
+        <div class="capsid-facet facet-3"></div>
+        <div class="capsid-facet facet-4"></div>
+        <div class="capsid-facet facet-5"></div>
+        <div class="capsid-facet facet-6"></div>
+        <div class="capsid-inner"></div>
+        <div class="capsid-code code-1">ATGC</div>
+        <div class="capsid-code code-2">01101</div>
+        <div class="capsid-code code-3">BERT</div>
       </div>
-      <div class="spike spike-1"></div>
-      <div class="spike spike-2"></div>
-      <div class="spike spike-3"></div>
-      <div class="spike spike-4"></div>
-      <div class="spike spike-5"></div>
-      <div class="spike spike-6"></div>
-      <div class="spike spike-7"></div>
-      <div class="spike spike-8"></div>
-      <div class="spike spike-9"></div>
-      <div class="spike spike-10"></div>
-      <div class="spike spike-11"></div>
-      <div class="spike spike-12"></div>
-      <div class="antibody ab-1"></div>
-      <div class="antibody ab-2"></div>
-      <div class="antibody ab-3"></div>
+      <div class="code-stream stream-1"><span>def classify(seq):</span></div>
+      <div class="code-stream stream-2"><span>return model.predict(x)</span></div>
+      <div class="code-stream stream-3"><span>SPIKE_P681R</span></div>
+      <div class="code-stream stream-4"><span>embedding = encode(s)</span></div>
+      <div class="code-stream stream-5"><span>variant: B.1.617.2</span></div>
+      <div class="code-stream stream-6"><span>score: 0.97</span></div>
+      <div class="absorb-flash"></div>
     </div>`,
 
-    // 2: Genomics Data Portal — DNA double helix with data nodes
-    `<div class="bio-illustration bio-dna">
-      <div class="helix-container">
-        <div class="helix-strand strand-a">
-          <div class="helix-node node-a1"></div>
-          <div class="helix-node node-a2"></div>
-          <div class="helix-node node-a3"></div>
-          <div class="helix-node node-a4"></div>
-          <div class="helix-node node-a5"></div>
-          <div class="helix-node node-a6"></div>
-          <div class="helix-node node-a7"></div>
-          <div class="helix-node node-a8"></div>
-        </div>
-        <div class="helix-rung rung-1"></div>
-        <div class="helix-rung rung-2"></div>
-        <div class="helix-rung rung-3"></div>
-        <div class="helix-rung rung-4"></div>
-        <div class="helix-rung rung-5"></div>
-        <div class="helix-rung rung-6"></div>
-        <div class="helix-rung rung-7"></div>
-        <div class="helix-rung rung-8"></div>
-        <div class="helix-strand strand-b">
-          <div class="helix-node node-b1"></div>
-          <div class="helix-node node-b2"></div>
-          <div class="helix-node node-b3"></div>
-          <div class="helix-node node-b4"></div>
-          <div class="helix-node node-b5"></div>
-          <div class="helix-node node-b6"></div>
-          <div class="helix-node node-b7"></div>
-          <div class="helix-node node-b8"></div>
-        </div>
+    // 2: Pathogen Surveillance — covid particles drifting like pollen
+    `<div class="bio-illustration bio-pollen">
+      <div class="air-current current-1"></div>
+      <div class="air-current current-2"></div>
+      <div class="air-current current-3"></div>
+      <div class="pollen-virus pv-1">
+        <div class="pv-body"></div>
+        <div class="pv-spike ps-1"></div>
+        <div class="pv-spike ps-2"></div>
+        <div class="pv-spike ps-3"></div>
+        <div class="pv-spike ps-4"></div>
+        <div class="pv-spike ps-5"></div>
+        <div class="pv-spike ps-6"></div>
+        <div class="pv-spike ps-7"></div>
+        <div class="pv-spike ps-8"></div>
       </div>
-      <div class="data-node dn-1"></div>
-      <div class="data-node dn-2"></div>
-      <div class="data-node dn-3"></div>
-      <div class="data-node dn-4"></div>
-      <div class="data-line dl-1"></div>
-      <div class="data-line dl-2"></div>
-      <div class="data-line dl-3"></div>
+      <div class="pollen-virus pv-2">
+        <div class="pv-body"></div>
+        <div class="pv-spike ps-1"></div>
+        <div class="pv-spike ps-2"></div>
+        <div class="pv-spike ps-3"></div>
+        <div class="pv-spike ps-4"></div>
+        <div class="pv-spike ps-5"></div>
+        <div class="pv-spike ps-6"></div>
+        <div class="pv-spike ps-7"></div>
+        <div class="pv-spike ps-8"></div>
+      </div>
+      <div class="pollen-virus pv-3">
+        <div class="pv-body"></div>
+        <div class="pv-spike ps-1"></div>
+        <div class="pv-spike ps-2"></div>
+        <div class="pv-spike ps-3"></div>
+        <div class="pv-spike ps-4"></div>
+        <div class="pv-spike ps-5"></div>
+        <div class="pv-spike ps-6"></div>
+        <div class="pv-spike ps-7"></div>
+        <div class="pv-spike ps-8"></div>
+      </div>
+      <div class="pollen-virus pv-4">
+        <div class="pv-body"></div>
+        <div class="pv-spike ps-1"></div>
+        <div class="pv-spike ps-2"></div>
+        <div class="pv-spike ps-3"></div>
+        <div class="pv-spike ps-4"></div>
+        <div class="pv-spike ps-5"></div>
+        <div class="pv-spike ps-6"></div>
+        <div class="pv-spike ps-7"></div>
+        <div class="pv-spike ps-8"></div>
+      </div>
+      <div class="pollen-virus pv-5">
+        <div class="pv-body"></div>
+        <div class="pv-spike ps-1"></div>
+        <div class="pv-spike ps-2"></div>
+        <div class="pv-spike ps-3"></div>
+        <div class="pv-spike ps-4"></div>
+        <div class="pv-spike ps-5"></div>
+        <div class="pv-spike ps-6"></div>
+        <div class="pv-spike ps-7"></div>
+        <div class="pv-spike ps-8"></div>
+      </div>
+      <div class="pollen-dust pd-1"></div>
+      <div class="pollen-dust pd-2"></div>
+      <div class="pollen-dust pd-3"></div>
+      <div class="pollen-dust pd-4"></div>
+      <div class="pollen-dust pd-5"></div>
+      <div class="pollen-dust pd-6"></div>
+      <div class="pollen-dust pd-7"></div>
+      <div class="pollen-dust pd-8"></div>
     </div>`
   ];
 
