@@ -2,6 +2,7 @@
   "name": "Michal Babinski",
   "role": "Senior Bioinformatics Developer",
   "tagline": "Building clinical-grade genomics pipelines\nthat turn raw sequences into answers.",
+  "statement": "What the future holds nobody can tell. But it's important to stay curious and to challenge yourself in how you think about and approach problems. As long as this world remains human, I will remain ethical in my approach and true to the mission of creating a slightly better world.", 
   "about": {
     "heading": "From raw reads\nto *real impact.*",
     "columns": [
@@ -39,9 +40,9 @@
     { "degree": "BS, Molecular Genetics & Genomics", "school": "Michigan State University", "year": "2020" } ],
   "projects": [
     {
-      "title": "Pathogen WGS Pipeline",
-      "description": "End-to-end Nextflow workflow for whole-genome sequencing pathogen detection — from reads QC to variant calling with automated validation frameworks.",
-      "tags": ["Nextflow", "Python", "Docker"]
+      "title": "Pathogen WGS Pipelines (Public Health Bioinformatics)",
+      "description": "End-to-end workflows for whole-genome sequencing pathogen detection — from reads QC to assembly to variant calling with automated validation frameworks. Built out for Virusal, Bacterial, and Fungal pathogens.",
+      "tags": ["WDL", "Nextflow", "Python", "Docker"]
     },
     {
       "title": "SARS-CoV-2 Variant Classifier",
@@ -49,9 +50,9 @@
       "tags": ["ML/AI", "Python", "Genomics"]
     },
     {
-      "title": "Genomics Data Portal",
-      "description": "Database visualization and metadata system for biological research, integrating diverse multi-omics datasets into a searchable, public-facing platform.",
-      "tags": ["Full-Stack", "PostgreSQL", "APIs"]
+      "title": "Pathogen Surveillence Automation Sofware",
+      "description": "Built out and architected automation library for quichly setting up and deploying workflow and data orchestration for different pathogen surviellence networks allowing for real time insights into organism evolution.",
+      "tags": ["Data Modeling", "BigQuery", "APIs", "Cloud Architecture"]
     }
   ],
   "contact": {
