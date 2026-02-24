@@ -41,7 +41,7 @@
   "projects": [
     {
       "title": "Pathogen WGS Pipelines (Public Health Bioinformatics)",
-      "description": "End-to-end workflows for whole-genome sequencing pathogen detection — from reads QC to assembly to variant calling with automated validation frameworks. Built out for Virusal, Bacterial, and Fungal pathogens.",
+      "description": "End-to-end workflows for whole-genome sequencing pathogen detection — from reads QC to assembly to variant calling with automated validation frameworks. Built out for Viral, Bacterial, and Fungal pathogens.",
       "tags": ["WDL", "Nextflow", "Python", "Docker"]
     },
     {
