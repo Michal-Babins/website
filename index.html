@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michal Babinski — Senior Bioinformatics Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Grain overlay for texture -->
+  <div class="grain"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">MB</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-layout">
+      <div class="hero-text">
+        <p class="hero-greeting" id="hero-role"></p>
+        <h1 class="hero-name" id="hero-name"></h1>
+        <div class="hero-rule"></div>
+        <p class="hero-tagline" id="hero-tagline"></p>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-shape">
+          <div class="starburst">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M100,0 L112,88 L200,100 L112,112 L100,200 L88,112 L0,100 L88,88 Z" fill="var(--mustard)"/>
+            </svg>
+          </div>
+          <!-- DNA helix nod — double circles -->
+          <div class="hero-circle"></div>
+          <div class="hero-circle-secondary"></div>
+          <div class="hero-diamond"></div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="section-grid">
+      <div class="section-label">
+        <span class="label-number">01</span>
+        <span class="label-text">About</span>
+      </div>
+      <div class="about-content">
+        <h2 class="section-heading" id="about-heading"></h2>
+        <div class="about-columns" id="about-columns"></div>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </div>
+    <div class="about-decorative">
+      <div class="deco-legs">
+        <div class="leg"></div>
+        <div class="leg"></div>
+        <div class="leg"></div>
+        <div class="leg"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="experience" id="experience">
+    <div class="section-grid">
+      <div class="section-label">
+        <span class="label-number">02</span>
+        <span class="label-text">Experience</span>
+      </div>
+      <div class="experience-content">
+        <h2 class="section-heading">Where I've<br><em>been.</em></h2>
+        <div class="timeline" id="timeline"></div>
+        <div class="education" id="education"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work / Projects -->
+  <section class="work" id="work">
+    <div class="section-grid">
+      <div class="section-label">
+        <span class="label-number">03</span>
+        <span class="label-text">Work</span>
+      </div>
+      <div class="work-intro">
+        <h2 class="section-heading">Selected<br><em>projects</em></h2>
+      </div>
+    </div>
+    <div class="projects" id="projects"></div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="contact-layout">
+      <div class="section-label">
+        <span class="label-number">04</span>
+        <span class="label-text">Contact</span>
+      </div>
+      <div class="contact-content">
+        <h2 class="contact-heading" id="contact-heading"></h2>
+        <div class="contact-links" id="contact-links"></div>
+      </div>
+    </div>
+    <div class="contact-starburst">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path d="M100,0 L112,88 L200,100 L112,112 L100,200 L88,112 L0,100 L88,88 Z" fill="var(--mustard)" opacity="0.3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">MB</span>
+      <span class="footer-copy">&copy; 2026 Michal Babinski</span>
+      <span class="footer-note">Crafted with care.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

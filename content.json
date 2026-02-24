@@ -1,0 +1,67 @@
+{
+  "name": "Michal Babinski",
+  "role": "Senior Bioinformatics Developer",
+  "tagline": "Building clinical-grade genomics pipelines\nthat turn raw sequences into answers.",
+  "about": {
+    "heading": "From raw reads\nto *real impact.*",
+    "columns": [
+      "I build end-to-end bioinformatics pipelines — from reads QC through variant calling to production deployment. My work in pathogen surveillance at national labs and genomics companies has meant writing code where correctness isn't optional, it's life-or-death.",
+      "With a background spanning molecular genetics, machine learning, and cloud infrastructure, I'm most at home at the intersection of biology and software engineering — where a well-crafted pipeline can reshape how we understand disease."
+    ]
+  },
+  "skills": [
+    { "category": "Genomics", "items": "WGS variant calling, SNV/INDEL analysis, assembly, functional annotation, pathogen classification" },
+    { "category": "Pipelines", "items": "Nextflow, WDL/Terra, Docker, GitHub Actions CI/CD" },
+    { "category": "Cloud & Data", "items": "AWS, GCP, PostgreSQL, REST APIs" },
+    { "category": "AI / ML", "items": "Claude Code, agentic AI tooling, BERT embeddings, deep mutational scanning models" }
+  ],
+  "experience": [
+    {
+      "period": "2024 — Present",
+      "title": "Senior Bioinformatics Developer",
+      "org": "Theiagen Genomics",
+      "description": "Architecting clinical-grade WGS pipelines for pathogen detection. Building production Python packages, classification databases, and cloud infrastructure across GCP and AWS."
+    },
+    {
+      "period": "2024",
+      "title": "Software Engineer",
+      "org": "Democraci Matters",
+      "description": "Built backend REST APIs and PostgreSQL schemas for a civic technology platform. Deployed multi-environment infrastructure with CI/CD on Heroku and AWS."
+    },
+    {
+      "period": "2021 — 2024",
+      "title": "Bioinformatics Software Developer",
+      "org": "Los Alamos National Laboratory",
+      "description": "Developed containerized multi-omics workflows. Trained ML models for SARS-CoV-2 variant prediction using BERT protein embeddings and deep mutational scanning data."
+    }
+  ],
+  "education": [
+    { "degree": "MS, Bioinformatics & Genomics", "school": "University of Oregon", "year": "2021" },
+    { "degree": "BS, Molecular Genetics & Genomics", "school": "Michigan State University", "year": "2020" }
+  ],
+  "projects": [
+    {
+      "title": "Pathogen WGS Pipeline",
+      "description": "End-to-end Nextflow workflow for whole-genome sequencing pathogen detection — from reads QC to variant calling with automated validation frameworks.",
+      "tags": ["Nextflow", "Python", "Docker"]
+    },
+    {
+      "title": "SARS-CoV-2 Variant Classifier",
+      "description": "BERT-based protein embedding model for lineage classification and binding affinity prediction of Spike protein variants using deep mutational scanning data.",
+      "tags": ["ML/AI", "Python", "Genomics"]
+    },
+    {
+      "title": "Genomics Data Portal",
+      "description": "Database visualization and metadata system for biological research, integrating diverse multi-omics datasets into a searchable, public-facing platform.",
+      "tags": ["Full-Stack", "PostgreSQL", "APIs"]
+    }
+  ],
+  "contact": {
+    "heading": "Let's build\nsomething *together.*",
+    "links": [
+      { "label": "Email", "value": "mbabinski17@gmail.com", "url": "mailto:mbabinski17@gmail.com" },
+      { "label": "GitHub", "value": "michalbabinski", "url": "https://github.com/michalbabinski" },
+      { "label": "LinkedIn", "value": "michalbabinski", "url": "https://linkedin.com/in/michalbabinski" }
+    ]
+  }
+}
